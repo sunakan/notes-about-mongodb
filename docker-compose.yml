@@ -1,0 +1,11 @@
+---
+
+version: "3.7"
+
+services:
+  db:
+    image: mongo:${MONGO_DB_VERSION_TAG}
+  client:
+    image: mongo:${MONGO_DB_VERSION_TAG}
+    depends_on:
+      - db
